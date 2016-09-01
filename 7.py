@@ -1,3 +1,4 @@
+#hell no
 try:
     arr = map(int, raw_input().strip().split())
 except (TypeError, ValueError):
