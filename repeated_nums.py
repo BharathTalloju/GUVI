@@ -6,12 +6,14 @@ except (TypeError, ValueError):
 arr.sort()
 n = len(arr)
 if n == 1:
-    print arr[0]
     pass
 else:
     result = ''
     i,j = 0,1
     while j<n:
+        if arr[i] < 0:
+            print '0'
+            exit(1)
         if arr[i] == arr[j]:
             result += str(arr[i])+' '
             while  j < n and arr[i] == arr[j]:
