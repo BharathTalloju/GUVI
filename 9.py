@@ -6,16 +6,23 @@ except (ValueError, TypeError):
     pass
 arr = sorted(arr_org)
 n=len(arr)
+if n < 2:
+    print 'None'
+    exit(1)
 i = 0
-while arr[i] < 0:
+while  i < n  and  arr[i] < 0:
     i+=1
     pass
-if arr[i] == arr[i+1]:
-    print i,i+1
-    exit(1)
 np = i-1
 pp = i
 min = (9999999, None, None)
+if np<0:
+    min = (9, arr[pp], arr[pp+1])
+    pass
+if pp >= n:
+    min = (9, arr[np], arr[np-1])
+    pass
+
 while np >=0 and pp < n:
     new_min = arr[pp]+arr[np]
     if abs(new_min) < min:
