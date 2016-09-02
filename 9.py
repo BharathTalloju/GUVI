@@ -10,6 +10,9 @@ i = 0
 while arr[i] < 0:
     i+=1
     pass
+if arr[i] == arr[i+1]:
+    print i,i+1
+    exit(1)
 np = i-1
 pp = i
 min = (9999999, None, None)
