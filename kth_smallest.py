@@ -8,4 +8,5 @@ except (ValueError, TypeError):
 arr.sort()
 if (k > len(arr)) or k < 1:
     print None
-print arr[-k]
+else:
+    print arr[-k]
